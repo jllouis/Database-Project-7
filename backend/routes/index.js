@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const Knex = require('knex');
 const prompt = require('prompt');
+
 // const Sequelize = require('sequelize');
 // const sequelize = new Sequelize('F17336Gteam2', 'nodejsapp', 'team2password',
 //     {
@@ -26,7 +27,7 @@ const knex = Knex({
     connection: config
 });
 
-// console.log("sequelize setup complete");
+console.log("setup complete");
 
 router.post('/availability', (req, res) => {
     console.log("calling SP train_available");

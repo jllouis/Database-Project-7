@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8ba84b8-5793-4bb5-94dd-b120affbf737" name="Default" comment="initializing express project">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/backend/routes/index.js" afterPath="$PROJECT_DIR$/backend/routes/index.js" />
-      <change beforePath="$PROJECT_DIR$/frontend" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -62,10 +60,10 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="18">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
-                <marker date="1514013556903" expanded="true" signature="132:330" ph="..." />
+                <marker date="1514013742126" expanded="true" signature="133:331" ph="..." />
               </folding>
             </state>
           </provider>
@@ -206,7 +204,7 @@
       <workItem from="1513030520320" duration="3990000" />
       <workItem from="1513889351816" duration="11807000" />
       <workItem from="1513995684509" duration="533000" />
-      <workItem from="1514001800230" duration="9161000" />
+      <workItem from="1514001800230" duration="9307000" />
     </task>
     <task id="LOCAL-00001" summary="initializing express project">
       <created>1513032550472</created>
@@ -219,7 +217,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25491000" />
+    <option name="totallyTimeSpent" value="25637000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -299,7 +297,7 @@
         <state relative-caret-position="594">
           <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
           <folding>
-            <marker date="1514013556903" expanded="true" signature="132:330" ph="..." />
+            <marker date="1514013742126" expanded="true" signature="133:331" ph="..." />
           </folding>
         </state>
       </provider>
@@ -341,7 +339,7 @@
         <state relative-caret-position="594">
           <caret line="33" column="20" lean-forward="true" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
           <folding>
-            <marker date="1514013556903" expanded="true" signature="132:330" ph="..." />
+            <marker date="1514013742126" expanded="true" signature="133:331" ph="..." />
           </folding>
         </state>
       </provider>
@@ -396,10 +394,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state relative-caret-position="18">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <marker date="1514013556903" expanded="true" signature="132:330" ph="..." />
+            <marker date="1514013742126" expanded="true" signature="133:331" ph="..." />
           </folding>
         </state>
       </provider>
