@@ -35,7 +35,7 @@ router.post('/availability', (req, res) => {
     knex.raw(`call Team7_express_train_available(${req.body.date}, ${req.body.city})`)
         .then( result => {
             console.log(result);
-            res.send(200).end();
+            res.send(200).end(result);
         })
 });
 
@@ -45,7 +45,7 @@ router.post('/reservation', (req, res) => {
     ${req.body.num_passengers});`)
         .then( result => {
             console.log(result);
-            res.send(200).end();
+            res.send(200).end(result);
         })
 });
 
