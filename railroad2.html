@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+body {
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/ac/Hitachi_Super_Express_mockup_%281%29.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    margin-center: 2200px;
+}
+h1{
+    display:inline;
+    background-color:blue;
+    color:white;
+}
+p{
+    display: inline;
+    background-color:blue;
+    color:white;
+}
+.nav {
+    list-style-type: none;
+    padding: 0;
+}
+
+function disp_var() {
+    var date_input = document.getElementById("date_userInput").value;
+	var destination_input = document.getElementById("destination_userInput").value;
+}
+function disp_var1() {
+    var trainid_input = document.getElementById("trainId_userInput").value;
+	var date1_input = document.getElementById("date1_userInput").value;
+	var pass_input = document.getElementById("pass_userInput").value;
+	var adult_input = document.getElementById("nr_adults_userInput").value;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align:middle;font-size:360%;">Railroad Ticket Station</h1><br><br><br>
+<p style="text-align:middle;font-size:250%;">Check Train Availability</p><br><br>
+
+<nav class="nav">
+<form>
+Date:<input type="datetime" name="FirstName" value="2017-24-12" style="width:100px; height: 30px;background-color: yellow;" id="date_userInput"/>
+Destination: <input type="text" name="LastName" value="New York" style="width: 100px; height: 30px;background-color: yellow;"id="destination_userInput"/>
+
+<input type="submit" value="Submit" style="width: 100px; height: 30px;background-color: yellow;"onclick="disp_var();"/><br><br>
+
+
+<iframe style="background-color: white; width: 1300px; height: 150px; align: middle;">
+</iframe>
+</form>
+</form>
+</nav>
+
+<br><br><br><p style="text-align:middle;font-size:250%;">Reserve a train</p><br><br>
+<nav1 class="nav1">
+<form id="form1" onsubmit="return false;">
+Train Number: <input type="digits" name="Nr. Train" value="0" style="width:40px; height: 25px;background-color: yellow;" id="trainId_userInput"/>
+Date: <input type="datetime" name="Reservation Date" value="2017-24-12" style="width:100px; height: 25px;background-color: yellow;" id="date1_userInput"/>
+Passenger Id Card: <input type="digits" name="Nr. ID" value="0" style="width:40px; height: 25px;background-color: yellow;" id="pass_userInput"/>
+Nr. Passengers: <input type="digits" name="Nr. Adults" value="0" style="width:40px; height: 25px;background-color: yellow;" id="nr_adults_userInput"/>
+<input type="submit" value="Submit" style="width: 100px; height: 30px;background-color: yellow;"onclick="disp_var1();"/><br><br>
+
+
+</form>
+</form>
+</nav1>
+
+<nav2 class="nav2">
+<form>
+Display ticket: <input type="submit" value="Submit" style="width: 100px; height: 30px;background-color: yellow;">
+<iframe style="background-color: white; width: 1300px; height: 150px; align: middle;">
+</iframe>
+</form>
+</form>
+</nav2>
+
+
+
+</body>
+</html>
