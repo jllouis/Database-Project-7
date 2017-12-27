@@ -1,57 +1,47 @@
-var express = require('express');
-var router = express.Router();
-const Knex = require('knex');
-const prompt = require('prompt');
-
-// const Sequelize = require('sequelize');
-// const sequelize = new Sequelize('F17336Gteam2', 'nodejsapp', 'team2password',
-//     {
-//         host: 'localhost',
-//         dialect: 'mysql'
-//     },)
-
-prompt.start();
-
-const config = {
-    user: 'nodejsapp',
-    password: 'team2password',
-    database: 'F17336Gteam2',
-    host: '127.0.0.1'
-};
-
-
-
-// Connect to the database
-const knex = Knex({
-    client: 'mysql',
-    connection: config
+const express = require('express');
+const router = express.Router();
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize('F17336Gteam2', 'nodejsapp', 'team2password', {
+    host: 'localhost',
+    dialect: 'mysql',
+    pool: {
+        max: 5,
+        min: 0,
+        acquire: 30000,
+        idle: 10000
+    },
+    operatorsAliases: false
 });
 
-console.log("setup complete");
-
+router.get('/test', (req, res) => {
+    console.log("testing database connectivity\n");
+    sequelize.query("show databases").spread( (result, data) => {
+        console.log("Printing result:");
+        console.log(result);
+        console.log("Printing data:");
+        console.log(data);
+        res.end();
+    })
+});
 router.post('/availability', (req, res) => {
-    console.log("calling SP train_available");
-    // console.log(`Sending: call Team7_express_train_available('${req.body.date}', "${req.body.city}")`);
-    knex.raw(`call Team7_express_train_available(${req.body.date}, ${req.body.city})`)
-        .then( result => {
+    sequelize.query(`call Team7_express_train_available("${req.body.date}", "${req.body.city}")`)
+        .spread( result => {
             console.log(result);
-            res.send(200).end(result);
+            res.status(200).send(result);
         })
 });
 
 router.post('/reservation', (req, res) => {
-    console.log("Calling Team7_Reserve_a_train(trainid, date,passengerid, nr_passengers)");
-    knex.raw(`call Team7_Reserve_a_train(${req.body.train_id}, ${req.body.date}, ${req.body.passenger_id},
-    ${req.body.num_passengers});`)
-        .then( result => {
+    sequelize.query(`call Team7_Reserve_a_train(${req.body.train_id}, "${req.body.date}", ${req.body.passenger_id},
+    "${req.body.num_passengers}")`, {type: sequelize.QueryTypes.})
+        .spread( result => {
             console.log(result);
-            res.send(200).end(result);
-        })
+            res.status(200).end();
+        }).catch (error => {
+            console.log(error);
+            res.send("error");
+    })
 });
 
-/* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
 
 module.exports = router;
