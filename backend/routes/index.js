@@ -32,16 +32,10 @@ router.post('/availability', (req, res) => {
 });
 
 router.post('/reservation', (req, res) => {
-    sequelize.query(`call Team7_Reserve_a_train(${req.body.train_id}, "${req.body.date}", ${req.body.passenger_id},
-    "${req.body.num_passengers}")`, {type: sequelize.QueryTypes.})
-        .spread( result => {
-            console.log(result);
-            res.status(200).end();
-        }).catch (error => {
-            console.log(error);
-            res.send("error");
+    sequelize.query(`call Team7_Reserve_a_train(${req.body.train_id}, "${req.body.date}", "${req.body.passenger_id}",
+    ${req.body.num_passengers})`).then(result => {
+        res.status(200).end("OK");
     })
 });
-
 
 module.exports = router;
